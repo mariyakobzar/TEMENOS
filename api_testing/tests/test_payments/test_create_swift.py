@@ -12,7 +12,7 @@ class TestCreateSwift:
         'payload_type, endpoint, status_code',
         [
             (Payload.payload_swift_standard, Urls.CREATE_SWIFT, 200),
-            #(Payload.payload_swift_urgent, Urls.CREATE_SWIFT, 200),
+            (Payload.payload_swift_urgent, Urls.CREATE_SWIFT, 200),
             (Payload.payload_swift_express, Urls.CREATE_SWIFT, 200),
             (Payload.payload_swift_with_intermediary_bank, Urls.CREATE_SWIFT, 200),
             (Payload.payload_swift_usd, Urls.CREATE_SWIFT, 200),
@@ -39,7 +39,7 @@ class TestCreateSwift:
             (Payload.payload_swift_over_amount_with_intermediary_bank, 400)
 
         ]
-    )
+     )
     @allure.title('Создание платежа SWIFT, happy pass')
     def test_create_swift_payment_negative_result(self, payload_type, status_code):
         payload = payload_type

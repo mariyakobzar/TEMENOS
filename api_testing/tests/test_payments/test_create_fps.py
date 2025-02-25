@@ -12,7 +12,9 @@ class TestCreateFps:
         'payload_type, endpoint, status_code',
         [
             (Payload.payload_fps, Urls.CREATE_FPS, 200),
-            (Payload.payload_fps, Urls.CREATE_FPS_WITHOUT_VALIDATE_ONLY, 200)
+            (Payload.payload_fps, Urls.CREATE_FPS_WITHOUT_VALIDATE_ONLY, 200),
+            (Payload.payload_chaps, Urls.CREATE_CHAPS, 200),
+            (Payload.payload_chaps, Urls.CREATE_CHAPS_WITHOUT_VALIDATE_ONLY, 200),
                     ]
     )
     @allure.title('Создание платежа FPS, happy pass')

@@ -11,8 +11,10 @@ class TestCreateInternal:
     @pytest.mark.parametrize(
         'payload_type, endpoint, status_code',
         [
-            (Payload.payload_internal, Urls.CREATE_INTERNAL, 200),
-            (Payload.payload_internal, Urls.CREATE_INTERNAL_WITHOUT_VALIDATE_ONLY, 200)
+            (Payload.payload_internal_between_own_acc, Urls.CREATE_INTERNAL, 200),
+            (Payload.payload_internal_between_own_acc, Urls.CREATE_INTERNAL_WITHOUT_VALIDATE_ONLY, 200),
+            (Payload.payload_internal_differ_acc, Urls.CREATE_INTERNAL, 200),
+            (Payload.payload_internal_differ_acc, Urls.CREATE_INTERNAL_WITHOUT_VALIDATE_ONLY, 200)
                     ]
     )
     @allure.title('Создание INTERNAL, happy pass')
